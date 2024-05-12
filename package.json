@@ -1,38 +1,17 @@
-pipeline {
-    agent any
-    
-    stages {
-        stage('Récupérer le code source') {
-            steps {
-                git branch: 'main', url: 'https://github.com/ABDELILAH098/987.git'
-            }
-        }
-        
-        stage('Lancer le container') {
-            steps {
-                // Ajoutez ici les étapes pour lancer le container si nécessaire
-            }
-        }
-        
-        stage('Installer les dépendances') {
-            steps {
-                sh 'npm ci'
-            }
-        }
-        
-        stage('Build l\'application') {
-            steps {
-                sh 'npm run build'
-            }
-        }
-        
-        stage('Exporter la version HTML statique') {
-            steps {
-                sh 'npm run export'
-            }
-        }
-        
-       
-        }
-    }
+{
+  "name": "Pipeline as a code ",
+  "version": "1.0.0",
+  "description": "a remplir apres",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Abdelilah",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "body-parser": "^1.19.0"
+  }
 }
