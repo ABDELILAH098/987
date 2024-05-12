@@ -1,0 +1,38 @@
+pipeline {
+    agent any
+    
+    stages {
+        stage('Récupérer le code source') {
+            steps {
+                git branch: 'main', url: 'https://github.com/ABDELILAH098/987.git'
+            }
+        }
+        
+        stage('Lancer le container') {
+            steps {
+                // Ajoutez ici les étapes pour lancer le container si nécessaire
+            }
+        }
+        
+        stage('Installer les dépendances') {
+            steps {
+                sh 'npm ci'
+            }
+        }
+        
+        stage('Build l\'application') {
+            steps {
+                sh 'npm run build'
+            }
+        }
+        
+        stage('Exporter la version HTML statique') {
+            steps {
+                sh 'npm run export'
+            }
+        }
+        
+       
+        }
+    }
+}
