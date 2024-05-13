@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "Description de votre projet",
   "scripts": {
-    "build": "votre_commande_build",
-    "export": "votre_commande_export"
+    "build": "npm run build",
+    "export": "npm run export"
   },
   "dependencies": {
     "nom_du_module": "version_du_module"
