@@ -1,4 +1,12 @@
-
-git add package.json package-lock.json
-git commit -m "Add package-lock.json"
-git push origin main
+{
+  "name": "nom_du_projet",
+  "version": "1.0.0",
+  "description": "Description de votre projet",
+  "scripts": {
+    "build": "votre_commande_build",
+    "export": "votre_commande_export"
+  },
+  "dependencies": {
+    "nom_du_module": "version_du_module"
+  }
+}
